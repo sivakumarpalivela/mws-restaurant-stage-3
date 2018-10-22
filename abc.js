@@ -1,4 +1,4 @@
-const cacheName = 'v1';
+const cacheName = 'v2';
 
 const cacheAssets = [
     '/',
@@ -66,3 +66,4 @@ self.addEventListener('install',(event) =>{
                                  }));
 
   });
+

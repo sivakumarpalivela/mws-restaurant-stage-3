@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8"/>
@@ -42,15 +42,40 @@
     <!-- End map -->
     <!-- Beginning restaurant -->
     <section id="restaurant-container" tab-index="-1">
+      <div>
       <h2 id="restaurant-name"></h2>
-      <img id="restaurant-img">
+      <img tabindex="0" alt="Add to Fav Icon" id="favorite_icon" src="img/empty_heart.png">
+      </div>
+      <img id="restaurant-img" alt="restaurant image">
       <p id="restaurant-cuisine"></p>
       <p id="restaurant-address"></p>
       <table id="restaurant-hours" role="table"></table>
     </section>
     <!-- end restaurant -->
     <!-- Beginning reviews -->
+
+    <form id="add_review_form">
+        <label for="user_name">Enter Your Name:</label><br>
+        <input  id="user_name" type="text" name="name"><br><br>
+              
+        <label>Rating: </label>
+        <select id="rating" aria-label="Select rating">
+                <option value="1">1 Star</option>
+                <option value="2">2 Star</option>
+                <option value="3">3 Star</option>
+                <option value="4">4 Star</option>
+                <option value="5">5 Star</option>
+
+       </select>
+       <br><br>
+       <label for="comments">Your Comment :</label><br>
+       <textarea id="comments" rows="4" cols="50" name="comment"></textarea><br>
+        <button onclick="addReview()" class="add_review">Post Review</button>
+</form>
+
+
     <section id="reviews-container">
+      <h2>Reviews</h2>
       <ul id="reviews-list"></ul>
     </section>
     <!-- End reviews -->
